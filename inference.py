@@ -227,3 +227,77 @@ if __name__ == '__main__':
 
     main(args)
 
+'''
+5]
+2m
+123456
+# selected audio from exmaple/driven_audio
+img = 'examples/source_image/{}.png'.format(default_head_name.value)
+print(img)
+!python3.8 inference.py --driven_audio ./examples/driven_audio/RD_Radio31_000.wav \
+           --source_image {img} \
+           --result_dir ./results --still --preprocess full --enhancer gfpgan
+ChatGPTChatGPTChatGPT
+account_circle
+examples/source_image/full3.png
+using safetensor as default
+start to generate video... 1701939819.414688
+device========= cpu
+---------device----------- cpu
+0000: Audio2Coeff
+0.4623582363128662
+0001: AnimateFromCoeff
+2.5908899307250977
+3DMM Extraction for source image
+landmark Det:: 100% 1/1 [00:03<00:00,  3.78s/it]
+3DMM Extraction In Video:: 100% 1/1 [00:00<00:00,  3.44it/s]
+0002: preprocess_model generate
+9.292807340621948
+eyeblick? pose?
+None
+None
+mel:: 100% 200/200 [00:00<00:00, 16820.95it/s]
+audio2exp:: 100% 20/20 [00:01<00:00, 13.84it/s]
+0003: audio_to_coeff generate...
+3.8988897800445557
+rank, p_num: 0, 1
+[kp_detector]:
+1.2905128002166748
+[mapping]:
+0.024068355560302734
+0.012917041778564453
+Face Renderer::   2% 2/100 [02:02<1:39:47, 61.09s/it]
+Traceback (most recent call last):
+  File "inference.py", line 228, in <module>
+    main(args)
+  File "inference.py", line 155, in main
+    result = animate_from_coeff.generate(data, save_dir, pic_path, crop_info, \
+  File "/content/mj_xtalker/src/facerender/animate.py", line 181, in generate
+    predictions_video = make_animation(source_image, source_semantics, target_semantics,
+  File "/content/mj_xtalker/src/facerender/modules/make_animation.py", line 142, in make_animation
+    out = generator(source_image, kp_source=kp_source, kp_driving=kp_norm)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/content/mj_xtalker/src/facerender/modules/generator.py", line 224, in forward
+    dense_motion = self.dense_motion_network(feature=feature_3d, kp_driving=kp_driving,
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/content/mj_xtalker/src/facerender/modules/dense_motion.py", line 98, in forward
+    prediction = self.hourglass(input_)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/content/mj_xtalker/src/facerender/modules/util.py", line 331, in forward
+    return self.decoder(self.encoder(x))
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/content/mj_xtalker/src/facerender/modules/util.py", line 313, in forward
+    out = self.conv(out)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/conv.py", line 607, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/usr/local/lib/python3.8/dist-packages/torch/nn/modules/conv.py", line 602, in _conv_forward
+    return F.conv3d(
+KeyboardInterrupt
+^C
+'''
